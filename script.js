@@ -12,17 +12,27 @@ submitBtn.addEventListener("click", async (e) => {
     return;
   }
 
-  const response = await fetch(`https://api.nationalize.io/?name=${queryName}`);
-  const result = await response.json();
+  try {
+    const response = await fetch(`https://api.nationalize.io/?name=${queryName}`);
 
-  const { name, country } = result;
+    if (!response.ok) {
+      throw new Error(`Network response was not ok (status: ${response.status})`);
+    }
 
-  if (country.length === 0) {
-    feedBackElement.textContent = `No data found for the name "${name}".`;
-    return;
+    const result = await response.json();
+
+    const { name, country } = result;
+
+    if (country.length === 0) {
+      feedBackElement.textContent = `No data found for the name "${name}".`;
+      return;
+    }
+
+    const { country_id, probability } = country[0]; // Top country
+
+    feedBackElement.textContent = `${name} is most likely from ${country_id} with ${(probability * 100).toFixed(2)}% certainty.`;
+
+  } catch (error) {
+    feedBackElement.textContent = `Error fetching data: ${error.message}`;
   }
-
-  const { country_id, probability } = country[0]; // Top country
-
-  feedBackElement.textContent = `${name} is most likely from ${country_id} with ${(probability * 100).toFixed(2)}% certainty.`;
 });
