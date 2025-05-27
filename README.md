@@ -67,6 +67,8 @@ No build steps or dependencies — it just works.
 ```
 ## Screenshot
 ![image](https://github.com/user-attachments/assets/18253277-9ac7-4de3-a8fa-9ba56ec41e81)
+![image](https://github.com/user-attachments/assets/c917ae33-71b6-4e98-840f-9042a998271d)
+
 
 
 
