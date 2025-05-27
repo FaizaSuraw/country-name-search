@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/6c43ce5c-c799-4855-a0f3-f1efd46b5eae)
 # 🌍 Name Origin Finder
 
 A simple and elegant web application that allows users to search the **most likely country of origin** based on a name using the [Nationalize.io API](https://nationalize.io/). Built with vanilla JavaScript, HTML, and CSS — no frameworks, just pure front-end.
@@ -25,8 +25,6 @@ A simple and elegant web application that allows users to search the **most like
 ├── index.html          # Main HTML file
 ├── style.css           # Styling
 ├── script.js           # JavaScript logic
-├── countries.json      # ISO country code-to-name mapping (optional enhancement)
-└── favicon.ico         # (Optional) Tab icon
 ```
 
 ## 🚀 Getting Started
@@ -34,8 +32,8 @@ A simple and elegant web application that allows users to search the **most like
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/name-origin-finder.git
-   cd name-origin-finder
+   git clone https://github.com/FaizaSuraw/country-name-search.git
+   cd country-name-search
    ```
 
 2. **Open `index.html` in your browser**
@@ -67,6 +65,10 @@ No build steps or dependencies — it just works.
   ]
 }
 ```
+## Screenshot
+![image](https://github.com/user-attachments/assets/18253277-9ac7-4de3-a8fa-9ba56ec41e81)
+
+
 
 ## 🧠 Improvements To Explore
 
